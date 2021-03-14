@@ -1,0 +1,9 @@
+D:\Transaction System\TransactionSystem\TransactionSystem\bin\Debug\TransactionSystem.exe.config
+D:\Transaction System\TransactionSystem\TransactionSystem\bin\Debug\TransactionSystem.exe
+D:\Transaction System\TransactionSystem\TransactionSystem\bin\Debug\TransactionSystem.pdb
+D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.csprojAssemblyReference.cache
+D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.Properties.Resources.resources
+D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.csproj.GenerateResource.cache
+D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.csproj.CoreCompileInputs.cache
+D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.exe
+D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.pdb
