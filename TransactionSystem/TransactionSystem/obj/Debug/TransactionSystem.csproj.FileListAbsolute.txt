@@ -7,3 +7,7 @@ D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionS
 D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.csproj.CoreCompileInputs.cache
 D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.exe
 D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.pdb
+D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.Form1.resources
+D:\Transaction System\TransactionSystem\TransactionSystem\bin\Debug\Bunifu_UI_v1.52.dll
+D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.Splash.resources
+D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.csproj.CopyComplete
