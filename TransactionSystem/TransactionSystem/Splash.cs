@@ -27,6 +27,7 @@ namespace TransactionSystem
 
         }
         int startpoint = 0;
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
 
@@ -43,7 +44,7 @@ namespace TransactionSystem
 
         private void Splash_Load(object sender, EventArgs e)
         {
-            timer1.Stop();
+            timer1.Start();
         }
     }
 }
