@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace TransactionSystem
 {
@@ -16,6 +17,8 @@ namespace TransactionSystem
         {
             InitializeComponent();
         }
+                SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hp\Documents\Transaction.mdf;Integrated Security=True;Connect Timeout=30");
+
 
         private void bunifuCustomLabel4_Click(object sender, EventArgs e)
         {
@@ -25,6 +28,63 @@ namespace TransactionSystem
         private void bunifuMaterialTextbox4_OnValueChanged(object sender, EventArgs e)
         {
 
+        }
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Con.Open();
+                String queey = "insert into CategoryDB1 values ("+catidDbtxt.Text+",'"+CatNameTxt.Text+"','"+CatDescTxt.Text+"')";
+                SqlCommand cmd = new SqlCommand(queey, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Category Added Successfully");
+                Con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        private void populate() 
+        {
+
+            Con.Open();
+            String query = "select * from CategoryDB1";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            CatDGrid.DataSource = ds.Tables[0];
+            Con.Close();
+        
+        
+        }
+        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            catidDbtxt.Text = CatDGrid.CurrentRow.Cells[0].Value.ToString();
+            CatNameTxt.Text = CatDGrid.CurrentRow.Cells[1].Value.ToString();
+            CatDescTxt.Text = CatDGrid.CurrentRow.Cells[2].Value.ToString();
+            
+
+
+
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CategoryForm_Load(object sender, EventArgs e)
+        {
+            populate();
         }
     }
 }
