@@ -39,6 +39,7 @@ namespace TransactionSystem
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Category Added Successfully");
                 Con.Close();
+                populate();
             }
             catch (Exception ex)
             {
@@ -113,6 +114,39 @@ namespace TransactionSystem
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (catidDbtxt.Text == "" || CatNameTxt.Text == "" || CatDescTxt.Text == "")
+                {
+                    MessageBox.Show("Missing Information");
+                }
+                else
+                {
+                    Con.Open();
+                    string query = "update CategoryDB1 set CatName='" + CatNameTxt.Text + "', CatDesc='" + CatDescTxt.Text + "' where Catid=" + catidDbtxt.Text + ";";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Category Successfully Updated");
+
+                    Con.Close();
+                    populate();
+                }
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            ProductForm prod = new ProductForm();
+            prod.Show();
+            this.Hide();
         }
     }
 }
