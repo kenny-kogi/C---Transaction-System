@@ -86,5 +86,33 @@ namespace TransactionSystem
         {
             populate();
         }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                if (catidDbtxt.Text == "") {
+                    MessageBox.Show("Select the category to delete");
+
+                }
+                else
+                {
+                    Con.Open();
+                    String query = "delete from CategoryDB1 where  Catid=" + catidDbtxt.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Category Deleted");
+
+                    Con.Close();
+                    populate();
+                }
+
+            }
+            catch (Exception ex) 
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
