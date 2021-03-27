@@ -33,17 +33,18 @@ namespace TransactionSystem
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.Sellpass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.SellDG = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuMaterialTextbox4 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox6 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Sellname = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Sellage = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Sellphone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Sellid = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -54,9 +55,8 @@ namespace TransactionSystem
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuMaterialTextbox5 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellDG)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -64,18 +64,18 @@ namespace TransactionSystem
             this.bunifuGradientPanel1.BackColor = System.Drawing.SystemColors.ControlText;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuMaterialTextbox5);
+            this.bunifuGradientPanel1.Controls.Add(this.Sellpass);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton7);
             this.bunifuGradientPanel1.Controls.Add(this.comboBox2);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomDataGrid1);
+            this.bunifuGradientPanel1.Controls.Add(this.SellDG);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton6);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton4);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton5);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel5);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuMaterialTextbox4);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuMaterialTextbox3);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuMaterialTextbox2);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuMaterialTextbox6);
+            this.bunifuGradientPanel1.Controls.Add(this.Sellname);
+            this.bunifuGradientPanel1.Controls.Add(this.Sellage);
+            this.bunifuGradientPanel1.Controls.Add(this.Sellphone);
+            this.bunifuGradientPanel1.Controls.Add(this.Sellid);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuMaterialTextbox1);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel4);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel3);
@@ -91,6 +91,26 @@ namespace TransactionSystem
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(803, 539);
             this.bunifuGradientPanel1.TabIndex = 1;
+            // 
+            // Sellpass
+            // 
+            this.Sellpass.BackColor = System.Drawing.Color.Blue;
+            this.Sellpass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Sellpass.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Sellpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Sellpass.HintForeColor = System.Drawing.Color.White;
+            this.Sellpass.HintText = "";
+            this.Sellpass.isPassword = true;
+            this.Sellpass.LineFocusedColor = System.Drawing.Color.White;
+            this.Sellpass.LineIdleColor = System.Drawing.Color.White;
+            this.Sellpass.LineMouseHoverColor = System.Drawing.Color.White;
+            this.Sellpass.LineThickness = 3;
+            this.Sellpass.Location = new System.Drawing.Point(112, 239);
+            this.Sellpass.Margin = new System.Windows.Forms.Padding(4);
+            this.Sellpass.Name = "Sellpass";
+            this.Sellpass.Size = new System.Drawing.Size(236, 44);
+            this.Sellpass.TabIndex = 23;
+            this.Sellpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuFlatButton7
             // 
@@ -142,13 +162,13 @@ namespace TransactionSystem
             this.comboBox2.TabIndex = 21;
             this.comboBox2.Text = "Select Category";
             // 
-            // bunifuCustomDataGrid1
+            // SellDG
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.SellDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.SellDG.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.SellDG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SellDG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,17 +176,18 @@ namespace TransactionSystem
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(355, 87);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(432, 437);
-            this.bunifuCustomDataGrid1.TabIndex = 20;
+            this.SellDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.SellDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SellDG.DoubleBuffered = true;
+            this.SellDG.EnableHeadersVisualStyles = false;
+            this.SellDG.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.SellDG.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.SellDG.Location = new System.Drawing.Point(355, 87);
+            this.SellDG.Name = "SellDG";
+            this.SellDG.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.SellDG.Size = new System.Drawing.Size(432, 437);
+            this.SellDG.TabIndex = 20;
+            this.SellDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SellDG_CellContentClick);
             // 
             // bunifuFlatButton6
             // 
@@ -203,6 +224,7 @@ namespace TransactionSystem
             this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton6.Textcolor = System.Drawing.Color.Blue;
             this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton6.Click += new System.EventHandler(this.bunifuFlatButton6_Click);
             // 
             // bunifuFlatButton4
             // 
@@ -239,6 +261,7 @@ namespace TransactionSystem
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.Blue;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
             // bunifuFlatButton5
             // 
@@ -275,6 +298,7 @@ namespace TransactionSystem
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton5.Textcolor = System.Drawing.Color.Blue;
             this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton5.Click += new System.EventHandler(this.bunifuFlatButton5_Click);
             // 
             // bunifuCustomLabel5
             // 
@@ -288,85 +312,86 @@ namespace TransactionSystem
             this.bunifuCustomLabel5.TabIndex = 15;
             this.bunifuCustomLabel5.Text = "PASSWORD";
             // 
-            // bunifuMaterialTextbox4
+            // Sellname
             // 
-            this.bunifuMaterialTextbox4.BackColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox4.HintForeColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox4.HintText = "";
-            this.bunifuMaterialTextbox4.isPassword = false;
-            this.bunifuMaterialTextbox4.LineFocusedColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox4.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox4.LineMouseHoverColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox4.LineThickness = 3;
-            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(112, 104);
-            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
-            this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(236, 44);
-            this.bunifuMaterialTextbox4.TabIndex = 14;
-            this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Sellname.BackColor = System.Drawing.Color.Blue;
+            this.Sellname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Sellname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Sellname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Sellname.HintForeColor = System.Drawing.Color.White;
+            this.Sellname.HintText = "";
+            this.Sellname.isPassword = false;
+            this.Sellname.LineFocusedColor = System.Drawing.Color.White;
+            this.Sellname.LineIdleColor = System.Drawing.Color.White;
+            this.Sellname.LineMouseHoverColor = System.Drawing.Color.White;
+            this.Sellname.LineThickness = 3;
+            this.Sellname.Location = new System.Drawing.Point(112, 104);
+            this.Sellname.Margin = new System.Windows.Forms.Padding(4);
+            this.Sellname.Name = "Sellname";
+            this.Sellname.Size = new System.Drawing.Size(236, 44);
+            this.Sellname.TabIndex = 14;
+            this.Sellname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox3
+            // Sellage
             // 
-            this.bunifuMaterialTextbox3.BackColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox3.HintText = "";
-            this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(112, 142);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(236, 44);
-            this.bunifuMaterialTextbox3.TabIndex = 13;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Sellage.BackColor = System.Drawing.Color.Blue;
+            this.Sellage.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Sellage.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Sellage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Sellage.HintForeColor = System.Drawing.Color.White;
+            this.Sellage.HintText = "";
+            this.Sellage.isPassword = false;
+            this.Sellage.LineFocusedColor = System.Drawing.Color.White;
+            this.Sellage.LineIdleColor = System.Drawing.Color.White;
+            this.Sellage.LineMouseHoverColor = System.Drawing.Color.White;
+            this.Sellage.LineThickness = 3;
+            this.Sellage.Location = new System.Drawing.Point(112, 142);
+            this.Sellage.Margin = new System.Windows.Forms.Padding(4);
+            this.Sellage.Name = "Sellage";
+            this.Sellage.Size = new System.Drawing.Size(236, 44);
+            this.Sellage.TabIndex = 13;
+            this.Sellage.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Sellage.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox3_OnValueChanged);
             // 
-            // bunifuMaterialTextbox2
+            // Sellphone
             // 
-            this.bunifuMaterialTextbox2.BackColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(112, 187);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(236, 44);
-            this.bunifuMaterialTextbox2.TabIndex = 12;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Sellphone.BackColor = System.Drawing.Color.Blue;
+            this.Sellphone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Sellphone.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Sellphone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Sellphone.HintForeColor = System.Drawing.Color.White;
+            this.Sellphone.HintText = "";
+            this.Sellphone.isPassword = false;
+            this.Sellphone.LineFocusedColor = System.Drawing.Color.White;
+            this.Sellphone.LineIdleColor = System.Drawing.Color.White;
+            this.Sellphone.LineMouseHoverColor = System.Drawing.Color.White;
+            this.Sellphone.LineThickness = 3;
+            this.Sellphone.Location = new System.Drawing.Point(112, 187);
+            this.Sellphone.Margin = new System.Windows.Forms.Padding(4);
+            this.Sellphone.Name = "Sellphone";
+            this.Sellphone.Size = new System.Drawing.Size(236, 44);
+            this.Sellphone.TabIndex = 12;
+            this.Sellphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox6
+            // Sellid
             // 
-            this.bunifuMaterialTextbox6.BackColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMaterialTextbox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox6.HintForeColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox6.HintText = "";
-            this.bunifuMaterialTextbox6.isPassword = false;
-            this.bunifuMaterialTextbox6.LineFocusedColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox6.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox6.LineMouseHoverColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox6.LineThickness = 3;
-            this.bunifuMaterialTextbox6.Location = new System.Drawing.Point(112, 60);
-            this.bunifuMaterialTextbox6.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox6.Name = "bunifuMaterialTextbox6";
-            this.bunifuMaterialTextbox6.Size = new System.Drawing.Size(236, 44);
-            this.bunifuMaterialTextbox6.TabIndex = 11;
-            this.bunifuMaterialTextbox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Sellid.BackColor = System.Drawing.Color.Blue;
+            this.Sellid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Sellid.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sellid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Sellid.HintForeColor = System.Drawing.Color.White;
+            this.Sellid.HintText = "";
+            this.Sellid.isPassword = false;
+            this.Sellid.LineFocusedColor = System.Drawing.Color.White;
+            this.Sellid.LineIdleColor = System.Drawing.Color.White;
+            this.Sellid.LineMouseHoverColor = System.Drawing.Color.White;
+            this.Sellid.LineThickness = 3;
+            this.Sellid.Location = new System.Drawing.Point(112, 60);
+            this.Sellid.Margin = new System.Windows.Forms.Padding(4);
+            this.Sellid.Name = "Sellid";
+            this.Sellid.Size = new System.Drawing.Size(236, 44);
+            this.Sellid.TabIndex = 11;
+            this.Sellid.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuMaterialTextbox1
             // 
@@ -563,26 +588,6 @@ namespace TransactionSystem
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuMaterialTextbox5
-            // 
-            this.bunifuMaterialTextbox5.BackColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox5.HintForeColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox5.HintText = "";
-            this.bunifuMaterialTextbox5.isPassword = true;
-            this.bunifuMaterialTextbox5.LineFocusedColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox5.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox5.LineMouseHoverColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox5.LineThickness = 3;
-            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(112, 239);
-            this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox5.Name = "bunifuMaterialTextbox5";
-            this.bunifuMaterialTextbox5.Size = new System.Drawing.Size(236, 44);
-            this.bunifuMaterialTextbox5.TabIndex = 23;
-            this.bunifuMaterialTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // SellerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -598,9 +603,10 @@ namespace TransactionSystem
             this.Name = "SellerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SellerForm";
+            this.Load += new System.EventHandler(this.SellerForm_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellDG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -610,15 +616,15 @@ namespace TransactionSystem
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton7;
         private System.Windows.Forms.ComboBox comboBox2;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid SellDG;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox4;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox6;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Sellname;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Sellage;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Sellphone;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Sellid;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
@@ -626,7 +632,7 @@ namespace TransactionSystem
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox5;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Sellpass;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;

@@ -35,10 +35,10 @@ namespace TransactionSystem
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.logCb = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.usernameTb = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.userpasstb = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label5 = new System.Windows.Forms.Label();
@@ -86,64 +86,64 @@ namespace TransactionSystem
             this.label4.Text = "USERNAME";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // comboBox1
+            // logCb
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Blue;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.logCb.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logCb.ForeColor = System.Drawing.Color.Blue;
+            this.logCb.FormattingEnabled = true;
+            this.logCb.Items.AddRange(new object[] {
             "ADMIN",
             "SELLER"});
-            this.comboBox1.Location = new System.Drawing.Point(364, 113);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 33);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Text = "Select Role";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.logCb.Location = new System.Drawing.Point(364, 113);
+            this.logCb.Name = "logCb";
+            this.logCb.Size = new System.Drawing.Size(257, 33);
+            this.logCb.TabIndex = 6;
+            this.logCb.Text = "Select Role";
+            this.logCb.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // bunifuMaterialTextbox1
+            // usernameTb
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(364, 187);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(370, 44);
-            this.bunifuMaterialTextbox1.TabIndex = 9;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMaterialTextbox1.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
+            this.usernameTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.usernameTb.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.usernameTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.usernameTb.HintForeColor = System.Drawing.Color.Empty;
+            this.usernameTb.HintText = "";
+            this.usernameTb.isPassword = false;
+            this.usernameTb.LineFocusedColor = System.Drawing.Color.Blue;
+            this.usernameTb.LineIdleColor = System.Drawing.Color.Blue;
+            this.usernameTb.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.usernameTb.LineThickness = 3;
+            this.usernameTb.Location = new System.Drawing.Point(364, 187);
+            this.usernameTb.Margin = new System.Windows.Forms.Padding(4);
+            this.usernameTb.Name = "usernameTb";
+            this.usernameTb.Size = new System.Drawing.Size(370, 44);
+            this.usernameTb.TabIndex = 9;
+            this.usernameTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.usernameTb.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
             // 
-            // bunifuMaterialTextbox2
+            // userpasstb
             // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(364, 261);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(370, 44);
-            this.bunifuMaterialTextbox2.TabIndex = 10;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.userpasstb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.userpasstb.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.userpasstb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.userpasstb.HintForeColor = System.Drawing.Color.Empty;
+            this.userpasstb.HintText = "";
+            this.userpasstb.isPassword = false;
+            this.userpasstb.LineFocusedColor = System.Drawing.Color.Blue;
+            this.userpasstb.LineIdleColor = System.Drawing.Color.Blue;
+            this.userpasstb.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.userpasstb.LineThickness = 3;
+            this.userpasstb.Location = new System.Drawing.Point(364, 261);
+            this.userpasstb.Margin = new System.Windows.Forms.Padding(4);
+            this.userpasstb.Name = "userpasstb";
+            this.userpasstb.Size = new System.Drawing.Size(370, 44);
+            this.userpasstb.TabIndex = 10;
+            this.userpasstb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuThinButton21
             // 
@@ -204,9 +204,9 @@ namespace TransactionSystem
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.bunifuThinButton21);
-            this.Controls.Add(this.bunifuMaterialTextbox2);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.userpasstb);
+            this.Controls.Add(this.usernameTb);
+            this.Controls.Add(this.logCb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -227,10 +227,10 @@ namespace TransactionSystem
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox logCb;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox usernameTb;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox userpasstb;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label label5;

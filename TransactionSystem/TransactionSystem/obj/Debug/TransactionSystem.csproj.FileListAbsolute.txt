@@ -14,3 +14,4 @@ D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionS
 D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.ProductForm.resources
 D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.CategoryForm.resources
 D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.SellerForm.resources
+D:\Transaction System\TransactionSystem\TransactionSystem\obj\Debug\TransactionSystem.SellingForm.resources

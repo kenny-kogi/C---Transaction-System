@@ -49,7 +49,8 @@ namespace TransactionSystem
 
         private void label6_Click(object sender, EventArgs e)
         {
-
+            usernameTb.Text = "";
+            userpasstb.Text = "";
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -59,6 +60,44 @@ namespace TransactionSystem
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            if(usernameTb.Text == "" || userpasstb.Text == "")
+            {
+                MessageBox.Show("Enter the Username and Password ");
+            }
+            else
+            {
+                if (logCb.SelectedIndex > -1)
+                {
+                    if (logCb.SelectedItem.ToString() == "ADMIN")
+                    {
+
+                        if (usernameTb.Text == "ADMIN" && userpasstb.Text == "Admin")
+                        {
+                            ProductForm prod = new ProductForm();
+                            prod.Show();
+                            this.Hide();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("If you are the Admin, Enter the correct username and password");
+                        }
+
+                    }
+                    else if (logCb.SelectedItem.ToString() == "SELLER")
+                    {
+                        MessageBox.Show("You are in the Seller Section");
+
+                    }
+
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Select a role");
+                }
+            }
 
         }
     }

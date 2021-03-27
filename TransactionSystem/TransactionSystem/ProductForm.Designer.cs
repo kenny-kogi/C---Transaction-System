@@ -35,7 +35,7 @@ namespace TransactionSystem
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.ProdDG = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.CatCb = new System.Windows.Forms.ComboBox();
             this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -56,7 +56,7 @@ namespace TransactionSystem
             this.button1 = new System.Windows.Forms.Button();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdDG)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -66,7 +66,7 @@ namespace TransactionSystem
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton7);
             this.bunifuGradientPanel1.Controls.Add(this.comboBox2);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomDataGrid1);
+            this.bunifuGradientPanel1.Controls.Add(this.ProdDG);
             this.bunifuGradientPanel1.Controls.Add(this.CatCb);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton6);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton4);
@@ -143,13 +143,13 @@ namespace TransactionSystem
             this.comboBox2.TabIndex = 21;
             this.comboBox2.Text = "Select Category";
             // 
-            // bunifuCustomDataGrid1
+            // ProdDG
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.ProdDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ProdDG.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.ProdDG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ProdDG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,18 +157,18 @@ namespace TransactionSystem
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(355, 87);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(432, 437);
-            this.bunifuCustomDataGrid1.TabIndex = 20;
-            this.bunifuCustomDataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
+            this.ProdDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.ProdDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProdDG.DoubleBuffered = true;
+            this.ProdDG.EnableHeadersVisualStyles = false;
+            this.ProdDG.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.ProdDG.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.ProdDG.Location = new System.Drawing.Point(355, 87);
+            this.ProdDG.Name = "ProdDG";
+            this.ProdDG.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.ProdDG.Size = new System.Drawing.Size(432, 437);
+            this.ProdDG.TabIndex = 20;
+            this.ProdDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
             // 
             // CatCb
             // 
@@ -603,7 +603,7 @@ namespace TransactionSystem
             this.Load += new System.EventHandler(this.ProductForm_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdDG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -631,7 +631,7 @@ namespace TransactionSystem
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton7;
         private System.Windows.Forms.ComboBox comboBox2;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid ProdDG;
         private System.Windows.Forms.ComboBox CatCb;
     }
 }

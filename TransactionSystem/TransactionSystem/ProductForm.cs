@@ -25,20 +25,30 @@ namespace TransactionSystem
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hp\Documents\Transaction.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void fillCombo()
-        {
-            //This method binds the database
+        {/*
             Con.Open();
-            string query = "select CatName from CategoryDB1";
-            SqlCommand cmd = new SqlCommand(query, Con);
-            SqlDataReader rdr;
-            rdr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("CatName", typeof(string));
-            dt.Load(rdr);
-            CatCb.ValueMember = "catName";
-            CatCb.DataSource = dt;
-            Con.Close();
+            String query = "select * from ProductTb1";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            ProdDG.DataSource = ds.Tables[0];
+            Con.Close();*/
+
+            //This method binds the database
             
+             Con.Open();
+             string query = "select CatName from CategoryDB1";
+             SqlCommand cmd = new SqlCommand(query, Con);
+             SqlDataReader rdr;
+             rdr = cmd.ExecuteReader();
+             DataTable dt = new DataTable();
+             dt.Columns.Add("CatName", typeof(string));
+             dt.Load(rdr);
+             CatCb.ValueMember = "catName";
+             CatCb.DataSource = dt;
+             Con.Close();
+
         }
 
         private void ProductForm_Load(object sender, EventArgs e)
@@ -77,6 +87,20 @@ namespace TransactionSystem
             cat.Show();
             this.Hide();
         }
+        private void populate()
+        {
+
+            Con.Open();
+            String query = "select * from ProductTb1";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            ProdDG.DataSource = ds.Tables[0];
+            Con.Close();
+
+
+        }
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
@@ -86,9 +110,9 @@ namespace TransactionSystem
                 String queey = "insert into ProductTb1 values (" + Prodid.Text + ",'" + Prodname.Text + "'," + ProdQty.Text + ","+ Prodprice.Text +", '" +CatCb.SelectedValue.ToString()+"')";
                 SqlCommand cmd = new SqlCommand(queey, Con);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Category Added Successfully");
+                MessageBox.Show("Producty Added Successfully");
                 Con.Close();
-                //populate();
+                populate();
             }
             catch (Exception ex)
             {
@@ -98,7 +122,15 @@ namespace TransactionSystem
 
         private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            Prodid.Text = ProdDG.SelectedCells[0].Value.ToString();
+            Prodname.Text = ProdDG.SelectedCells[1].Value.ToString();
+            ProdQty.Text = ProdDG.SelectedCells[2].Value.ToString();
+            Prodprice.Text = ProdDG.SelectedCells[3].Value.ToString();
+
+            //CatCb.SelectedValue = ProdDG.SelectedRows[0].Cells[4].Value.ToString();
+
 
         }
+
     }
 }
