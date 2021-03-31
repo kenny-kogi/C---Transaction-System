@@ -37,7 +37,25 @@ namespace TransactionSystem
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Con.Open();
+                String queey = "insert into SellerTB1 values (" + Sellid.Text + ",'" + Sellname.Text + "','" + Sellage.Text + "','" + Sellphone.Text + "', '" + Sellpass.Text + "')";
+                SqlCommand cmd = new SqlCommand(queey, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Seller Added Successfully");
+                Con.Close();
+                populate();
+                Sellid.Text = "";
+                Sellname.Text = "";
+                Sellage.Text = "";
+                Sellphone.Text = "";
+                Sellpass.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void bunifuFlatButton6_Click(object sender, EventArgs e)
@@ -105,6 +123,38 @@ namespace TransactionSystem
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        int GrndTotal = 0; int n = 0;
+        private void bunifuFlatButton5_Click_1(object sender, EventArgs e)
+        {
+            if(Prodname.Text == "" || ProdQty.Text == "")
+            {
+
+                MessageBox.Show("Missing Data");
+            }
+
+            else {
+
+                int total = Convert.ToInt32(Prodprice.Text) * Convert.ToInt32(ProdQty.Text);
+
+                DataGridViewRow newRow = new DataGridViewRow();
+                newRow.CreateCells(ORDERDGV);
+                newRow.Cells[0].Value = n + 1;
+                newRow.Cells[1].Value = Prodname.Text;
+                newRow.Cells[2].Value = Prodprice.Text;
+                newRow.Cells[3].Value = ProdQty.Text;
+                newRow.Cells[4].Value = Convert.ToInt32(Prodprice.Text) * Convert.ToInt32(ProdQty.Text);
+                ORDERDGV.Rows.Add(newRow);
+                n++;
+                GrndTotal = GrndTotal + total;
+                Amtlbl.Text = "Ksh " + GrndTotal;
+            }
+            
+        }
+
+        private void bunifuCustomLabel6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
