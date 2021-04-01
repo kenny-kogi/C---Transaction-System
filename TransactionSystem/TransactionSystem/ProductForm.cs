@@ -132,5 +132,14 @@ namespace TransactionSystem
 
         }
 
+        private void CatCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

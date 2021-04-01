@@ -142,6 +142,7 @@ namespace TransactionSystem
             this.comboBox2.Size = new System.Drawing.Size(236, 32);
             this.comboBox2.TabIndex = 21;
             this.comboBox2.Text = "Select Category";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // ProdDG
             // 
@@ -183,6 +184,7 @@ namespace TransactionSystem
             this.CatCb.Size = new System.Drawing.Size(236, 32);
             this.CatCb.TabIndex = 19;
             this.CatCb.Text = "Select Category";
+            this.CatCb.SelectedIndexChanged += new System.EventHandler(this.CatCb_SelectedIndexChanged);
             // 
             // bunifuFlatButton6
             // 

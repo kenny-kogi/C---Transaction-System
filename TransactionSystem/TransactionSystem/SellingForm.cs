@@ -36,25 +36,30 @@ namespace TransactionSystem
         }
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
+
         {
-            try
+
+            if (Billid.Text == "")
             {
-                Con.Open();
-                String queey = "insert into SellerTB1 values (" + Sellid.Text + ",'" + Sellname.Text + "','" + Sellage.Text + "','" + Sellphone.Text + "', '" + Sellpass.Text + "')";
-                SqlCommand cmd = new SqlCommand(queey, Con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Seller Added Successfully");
-                Con.Close();
-                populate();
-                Sellid.Text = "";
-                Sellname.Text = "";
-                Sellage.Text = "";
-                Sellphone.Text = "";
-                Sellpass.Text = "";
+                MessageBox.Show("Missing Bill id");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    Con.Open();
+                    String queey = "insert into BillTB1 values (" + Billid.Text + ",'" + Sellername.Text + "','" + Dateid.Text + "','" + Amtlbl.Text + "')";
+                    SqlCommand cmd = new SqlCommand(queey, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Order Added Successfully");
+                    Con.Close();
+                    populatebill();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
@@ -77,6 +82,25 @@ namespace TransactionSystem
         {
 
         }
+
+        private void fillCombo()
+        {
+
+            //This method binds the database
+
+            Con.Open();
+            string query = "select CatName from CategoryDB1";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CatName", typeof(string));
+            dt.Load(rdr);
+            SearchCB.ValueMember = "catName";
+            SearchCB.DataSource = dt;
+            Con.Close();
+
+        }
         private void populate()
         {
 
@@ -87,6 +111,21 @@ namespace TransactionSystem
             var ds = new DataSet();
             sda.Fill(ds);
             ProdDGV.DataSource = ds.Tables[0];
+            Con.Close();
+
+
+        }
+
+        private void populatebill()
+        {
+
+            Con.Open();
+            String query = "select * from BillTB1";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            BillDGV.DataSource = ds.Tables[0];
             Con.Close();
 
 
@@ -147,7 +186,7 @@ namespace TransactionSystem
                 ORDERDGV.Rows.Add(newRow);
                 n++;
                 GrndTotal = GrndTotal + total;
-                Amtlbl.Text = "Ksh " + GrndTotal;
+                Amtlbl.Text = " " + GrndTotal;
             }
             
         }
@@ -155,6 +194,46 @@ namespace TransactionSystem
         private void bunifuCustomLabel6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ORDERDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+           
+            populate();
+            populatebill();
+            
+        }
+
+ 
+
+        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+            Con.Open();
+            String query = "select ProductName, ProdQty from ProductTb1 where ProductCategory='" + SearchCB.SelectedValue.ToString() + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            ProdDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
+
+        private void bunifuCustomLabel6_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 login = new Form1();
+            login.Show();
         }
     }
 }
