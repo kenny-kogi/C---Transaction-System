@@ -43,6 +43,9 @@ namespace TransactionSystem
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -59,9 +62,9 @@ namespace TransactionSystem
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(358, 30);
+            this.label2.Location = new System.Drawing.Point(347, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 32);
+            this.label2.Size = new System.Drawing.Size(121, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "LOGIN";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -69,7 +72,7 @@ namespace TransactionSystem
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(159, 273);
+            this.label3.Location = new System.Drawing.Point(59, 261);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(163, 32);
             this.label3.TabIndex = 4;
@@ -79,7 +82,7 @@ namespace TransactionSystem
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(159, 201);
+            this.label4.Location = new System.Drawing.Point(59, 201);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(163, 30);
             this.label4.TabIndex = 5;
@@ -94,7 +97,7 @@ namespace TransactionSystem
             this.logCb.Items.AddRange(new object[] {
             "ADMIN",
             "SELLER"});
-            this.logCb.Location = new System.Drawing.Point(364, 113);
+            this.logCb.Location = new System.Drawing.Point(257, 126);
             this.logCb.Name = "logCb";
             this.logCb.Size = new System.Drawing.Size(257, 33);
             this.logCb.TabIndex = 6;
@@ -110,7 +113,7 @@ namespace TransactionSystem
             // 
             this.usernameTb.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.usernameTb.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.usernameTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.usernameTb.ForeColor = System.Drawing.Color.Blue;
             this.usernameTb.HintForeColor = System.Drawing.Color.Empty;
             this.usernameTb.HintText = "";
             this.usernameTb.isPassword = false;
@@ -118,7 +121,7 @@ namespace TransactionSystem
             this.usernameTb.LineIdleColor = System.Drawing.Color.Blue;
             this.usernameTb.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.usernameTb.LineThickness = 3;
-            this.usernameTb.Location = new System.Drawing.Point(364, 187);
+            this.usernameTb.Location = new System.Drawing.Point(257, 187);
             this.usernameTb.Margin = new System.Windows.Forms.Padding(4);
             this.usernameTb.Name = "usernameTb";
             this.usernameTb.Size = new System.Drawing.Size(370, 44);
@@ -133,25 +136,26 @@ namespace TransactionSystem
             this.userpasstb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.userpasstb.HintForeColor = System.Drawing.Color.Empty;
             this.userpasstb.HintText = "";
-            this.userpasstb.isPassword = false;
+            this.userpasstb.isPassword = true;
             this.userpasstb.LineFocusedColor = System.Drawing.Color.Blue;
             this.userpasstb.LineIdleColor = System.Drawing.Color.Blue;
             this.userpasstb.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.userpasstb.LineThickness = 3;
-            this.userpasstb.Location = new System.Drawing.Point(364, 261);
+            this.userpasstb.Location = new System.Drawing.Point(257, 249);
             this.userpasstb.Margin = new System.Windows.Forms.Padding(4);
             this.userpasstb.Name = "userpasstb";
             this.userpasstb.Size = new System.Drawing.Size(370, 44);
             this.userpasstb.TabIndex = 10;
             this.userpasstb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.userpasstb.OnValueChanged += new System.EventHandler(this.userpasstb_OnValueChanged);
             // 
             // bunifuThinButton21
             // 
             this.bunifuThinButton21.ActiveBorderThickness = 1;
             this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.Blue;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Blue;
             this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
             this.bunifuThinButton21.ButtonText = "LOGIN";
@@ -163,7 +167,7 @@ namespace TransactionSystem
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Blue;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Blue;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(364, 349);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(257, 338);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(361, 51);
@@ -189,18 +193,48 @@ namespace TransactionSystem
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(636, 418);
+            this.label6.Location = new System.Drawing.Point(523, 416);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 32);
             this.label6.TabIndex = 13;
             this.label6.Text = "Clear";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(251, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(370, 32);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "TRANSACTION SYSTEM";
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(12, 469);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(159, 13);
+            this.bunifuCustomLabel1.TabIndex = 15;
+            this.bunifuCustomLabel1.Text = "Created by Keneth Kogi Mwangi";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(609, 469);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(182, 13);
+            this.bunifuCustomLabel2.TabIndex = 16;
+            this.bunifuCustomLabel2.Text = "2021 Computer Programmin 2 Project";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 513);
+            this.Controls.Add(this.bunifuCustomLabel2);
+            this.Controls.Add(this.bunifuCustomLabel1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.bunifuThinButton21);
@@ -235,6 +269,9 @@ namespace TransactionSystem
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
     }
 }
 

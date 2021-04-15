@@ -82,10 +82,38 @@ namespace TransactionSystem
         {
 
         }
+        private void fillCombo()
+        {/*
+            Con.Open();
+            String query = "select * from ProductTb1";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            ProdDG.DataSource = ds.Tables[0];
+            Con.Close();*/
+
+            //This method binds the database
+
+            Con.Open();
+            string query = "select CatName from CategoryDB1";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CatName", typeof(string));
+            dt.Load(rdr);
+            CatCD.ValueMember = "catName";
+            CatCD.DataSource = dt;
+     
+            Con.Close();
+
+        }
 
         private void CategoryForm_Load(object sender, EventArgs e)
         {
             populate();
+            fillCombo();
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)

@@ -171,5 +171,10 @@ namespace TransactionSystem
             Form1 login = new Form1();
             login.Show();
         }
+
+        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            populate();
+        }
     }
 }

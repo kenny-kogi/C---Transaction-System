@@ -30,12 +30,11 @@ namespace TransactionSystem
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.Sellpass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.SellDG = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -66,7 +65,6 @@ namespace TransactionSystem
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.Controls.Add(this.Sellpass);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton7);
-            this.bunifuGradientPanel1.Controls.Add(this.comboBox2);
             this.bunifuGradientPanel1.Controls.Add(this.SellDG);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton6);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton4);
@@ -97,7 +95,7 @@ namespace TransactionSystem
             this.Sellpass.BackColor = System.Drawing.Color.Blue;
             this.Sellpass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Sellpass.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Sellpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Sellpass.ForeColor = System.Drawing.Color.White;
             this.Sellpass.HintForeColor = System.Drawing.Color.White;
             this.Sellpass.HintText = "";
             this.Sellpass.isPassword = true;
@@ -114,7 +112,8 @@ namespace TransactionSystem
             // 
             // bunifuFlatButton7
             // 
-            this.bunifuFlatButton7.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton7.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.bunifuFlatButton7.Activecolor = System.Drawing.Color.White;
             this.bunifuFlatButton7.BackColor = System.Drawing.Color.White;
             this.bunifuFlatButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton7.BorderRadius = 0;
@@ -147,41 +146,28 @@ namespace TransactionSystem
             this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton7.Textcolor = System.Drawing.Color.Blue;
             this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Blue;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "ADMIN",
-            "SELLER"});
-            this.comboBox2.Location = new System.Drawing.Point(355, 49);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(236, 32);
-            this.comboBox2.TabIndex = 21;
-            this.comboBox2.Text = "Select Category";
+            this.bunifuFlatButton7.Click += new System.EventHandler(this.bunifuFlatButton7_Click);
             // 
             // SellDG
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.SellDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SellDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.SellDG.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.SellDG.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SellDG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SellDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SellDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.SellDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SellDG.DoubleBuffered = true;
             this.SellDG.EnableHeadersVisualStyles = false;
-            this.SellDG.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.SellDG.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.SellDG.HeaderBgColor = System.Drawing.Color.White;
+            this.SellDG.HeaderForeColor = System.Drawing.Color.Blue;
             this.SellDG.Location = new System.Drawing.Point(355, 87);
             this.SellDG.Name = "SellDG";
             this.SellDG.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -191,7 +177,7 @@ namespace TransactionSystem
             // 
             // bunifuFlatButton6
             // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.White;
             this.bunifuFlatButton6.BackColor = System.Drawing.Color.White;
             this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton6.BorderRadius = 0;
@@ -228,7 +214,7 @@ namespace TransactionSystem
             // 
             // bunifuFlatButton4
             // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.BackColor = System.Drawing.Color.White;
             this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton4.BorderRadius = 0;
@@ -265,7 +251,7 @@ namespace TransactionSystem
             // 
             // bunifuFlatButton5
             // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.White;
             this.bunifuFlatButton5.BackColor = System.Drawing.Color.White;
             this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton5.BorderRadius = 0;
@@ -317,7 +303,7 @@ namespace TransactionSystem
             this.Sellname.BackColor = System.Drawing.Color.Blue;
             this.Sellname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Sellname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Sellname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Sellname.ForeColor = System.Drawing.Color.White;
             this.Sellname.HintForeColor = System.Drawing.Color.White;
             this.Sellname.HintText = "";
             this.Sellname.isPassword = false;
@@ -337,7 +323,7 @@ namespace TransactionSystem
             this.Sellage.BackColor = System.Drawing.Color.Blue;
             this.Sellage.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Sellage.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Sellage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Sellage.ForeColor = System.Drawing.Color.White;
             this.Sellage.HintForeColor = System.Drawing.Color.White;
             this.Sellage.HintText = "";
             this.Sellage.isPassword = false;
@@ -358,7 +344,7 @@ namespace TransactionSystem
             this.Sellphone.BackColor = System.Drawing.Color.Blue;
             this.Sellphone.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Sellphone.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Sellphone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Sellphone.ForeColor = System.Drawing.Color.White;
             this.Sellphone.HintForeColor = System.Drawing.Color.White;
             this.Sellphone.HintText = "";
             this.Sellphone.isPassword = false;
@@ -378,7 +364,7 @@ namespace TransactionSystem
             this.Sellid.BackColor = System.Drawing.Color.Blue;
             this.Sellid.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Sellid.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sellid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Sellid.ForeColor = System.Drawing.Color.White;
             this.Sellid.HintForeColor = System.Drawing.Color.White;
             this.Sellid.HintText = "";
             this.Sellid.isPassword = false;
@@ -597,7 +583,6 @@ namespace TransactionSystem
 
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton7;
-        private System.Windows.Forms.ComboBox comboBox2;
         private Bunifu.Framework.UI.BunifuCustomDataGrid SellDG;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
