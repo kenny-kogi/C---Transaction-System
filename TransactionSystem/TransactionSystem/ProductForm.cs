@@ -47,12 +47,15 @@ namespace TransactionSystem
              dt.Load(rdr);
              CatCb.ValueMember = "catName";
              CatCb.DataSource = dt;
-             Con.Close();
+            CatCC.ValueMember = "catName";
+            CatCC.DataSource = dt;
+            Con.Close();
 
         }
 
         private void ProductForm_Load(object sender, EventArgs e)
         {
+            populate();
             fillCombo();
         }
 
@@ -127,7 +130,7 @@ namespace TransactionSystem
             ProdQty.Text = ProdDG.SelectedCells[2].Value.ToString();
             Prodprice.Text = ProdDG.SelectedCells[3].Value.ToString();
 
-            //CatCb.SelectedValue = ProdDG.SelectedRows[0].Cells[4].Value.ToString();
+           // CatCb.SelectedValue = ProdDG.SelectedRows[0].Cells[4].Value.ToString();
 
 
         }
@@ -140,6 +143,25 @@ namespace TransactionSystem
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuCustomLabel6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 login = new Form1();
+            login.Show();
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SellerForm sell = new SellerForm();
+            sell.Show();
+        }
+
+        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            populate();
         }
     }
 }

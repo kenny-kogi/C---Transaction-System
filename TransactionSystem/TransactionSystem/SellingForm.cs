@@ -80,14 +80,12 @@ namespace TransactionSystem
 
         private void bunifuFlatButton7_Click(object sender, EventArgs e)
         {
-
+            populate();
         }
 
         private void fillCombo()
         {
-
-            //This method binds the database
-
+            //puta
             Con.Open();
             string query = "select CatName from CategoryDB1";
             SqlCommand cmd = new SqlCommand(query, Con);
@@ -99,7 +97,6 @@ namespace TransactionSystem
             SearchCB.ValueMember = "catName";
             SearchCB.DataSource = dt;
             Con.Close();
-
         }
         private void populate()
         {
@@ -208,10 +205,10 @@ namespace TransactionSystem
 
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
-           
+          
             populate();
             populatebill();
-            
+            Sellername.Text = Form1.SellerName;
         }
 
  
@@ -234,6 +231,11 @@ namespace TransactionSystem
             this.Hide();
             Form1 login = new Form1();
             login.Show();
+        }
+
+        private void Sellername_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

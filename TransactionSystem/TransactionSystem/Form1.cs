@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace TransactionSystem
 {
@@ -16,6 +17,9 @@ namespace TransactionSystem
         {
             InitializeComponent();
         }
+        public static string SellerName = "";
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hp\Documents\Transaction.mdf;Integrated Security=True;Connect Timeout=30");
+
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
@@ -71,7 +75,7 @@ namespace TransactionSystem
                     if (logCb.SelectedItem.ToString() == "ADMIN")
                     {
 
-                        if (usernameTb.Text == "ADMIN" && userpasstb.Text == "Admin")
+                        if (usernameTb.Text == "admin" && userpasstb.Text == "admin")
                         {
                             ProductForm prod = new ProductForm();
                             prod.Show();
@@ -86,8 +90,24 @@ namespace TransactionSystem
                     }
                     else if (logCb.SelectedItem.ToString() == "SELLER")
                     {
-                        MessageBox.Show("You are in the Seller Section");
-
+                        // MessageBox.Show("You are in the Seller Section");
+                        Con.Open();
+                        SqlDataAdapter sda = new SqlDataAdapter("Select count(8) from SellerTB1 where SellerName='"+usernameTb.Text+ "'and SellerPass='"+userpasstb.Text+ "'", Con);
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        if(dt.Rows[0][0].ToString() == "1")
+                        {
+                            SellerName = usernameTb.Text;
+                            SellingForm sell = new SellingForm();
+                            sell.Show();
+                            this.Hide();
+                            Con.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Wrong Username or Password");
+                        }
+                        Con.Close();
                     }
 
 

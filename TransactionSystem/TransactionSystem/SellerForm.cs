@@ -150,5 +150,26 @@ namespace TransactionSystem
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            ProductForm product = new ProductForm();
+            product.Show();
+            this.Hide();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            CategoryForm cat = new CategoryForm();
+            cat.Show();
+            this.Hide();
+        }
+
+        private void bunifuCustomLabel6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 login = new Form1();
+            login.Show();
+        }
     }
 }

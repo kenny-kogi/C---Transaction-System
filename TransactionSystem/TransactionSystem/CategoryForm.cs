@@ -153,5 +153,19 @@ namespace TransactionSystem
         {
 
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SellerForm sell = new SellerForm();
+            sell.Show();
+        }
+
+        private void bunifuCustomLabel6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 login = new Form1();
+            login.Show();
+        }
     }
 }
