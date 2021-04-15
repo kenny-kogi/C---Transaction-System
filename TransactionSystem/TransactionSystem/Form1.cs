@@ -120,5 +120,10 @@ namespace TransactionSystem
             }
 
         }
+
+        private void userpasstb_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

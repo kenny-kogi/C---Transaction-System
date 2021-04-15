@@ -153,9 +153,9 @@ namespace TransactionSystem
             this.ProdDG.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ProdDG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -163,8 +163,8 @@ namespace TransactionSystem
             this.ProdDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProdDG.DoubleBuffered = true;
             this.ProdDG.EnableHeadersVisualStyles = false;
-            this.ProdDG.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.ProdDG.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.ProdDG.HeaderBgColor = System.Drawing.Color.White;
+            this.ProdDG.HeaderForeColor = System.Drawing.Color.Blue;
             this.ProdDG.Location = new System.Drawing.Point(355, 87);
             this.ProdDG.Name = "ProdDG";
             this.ProdDG.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -189,7 +189,7 @@ namespace TransactionSystem
             // 
             // bunifuFlatButton6
             // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.White;
             this.bunifuFlatButton6.BackColor = System.Drawing.Color.White;
             this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton6.BorderRadius = 0;
@@ -225,7 +225,7 @@ namespace TransactionSystem
             // 
             // bunifuFlatButton4
             // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.BackColor = System.Drawing.Color.White;
             this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton4.BorderRadius = 0;
@@ -261,7 +261,7 @@ namespace TransactionSystem
             // 
             // bunifuFlatButton5
             // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.White;
             this.bunifuFlatButton5.BackColor = System.Drawing.Color.White;
             this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton5.BorderRadius = 0;
@@ -313,7 +313,7 @@ namespace TransactionSystem
             this.Prodname.BackColor = System.Drawing.Color.Blue;
             this.Prodname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Prodname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Prodname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Prodname.ForeColor = System.Drawing.Color.White;
             this.Prodname.HintForeColor = System.Drawing.Color.White;
             this.Prodname.HintText = "";
             this.Prodname.isPassword = false;
@@ -333,7 +333,7 @@ namespace TransactionSystem
             this.ProdQty.BackColor = System.Drawing.Color.Blue;
             this.ProdQty.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ProdQty.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.ProdQty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProdQty.ForeColor = System.Drawing.Color.White;
             this.ProdQty.HintForeColor = System.Drawing.Color.White;
             this.ProdQty.HintText = "";
             this.ProdQty.isPassword = false;
@@ -353,7 +353,7 @@ namespace TransactionSystem
             this.Prodprice.BackColor = System.Drawing.Color.Blue;
             this.Prodprice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Prodprice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Prodprice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Prodprice.ForeColor = System.Drawing.Color.White;
             this.Prodprice.HintForeColor = System.Drawing.Color.White;
             this.Prodprice.HintText = "";
             this.Prodprice.isPassword = false;
@@ -373,7 +373,7 @@ namespace TransactionSystem
             this.Prodid.BackColor = System.Drawing.Color.Blue;
             this.Prodid.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Prodid.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Prodid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Prodid.ForeColor = System.Drawing.Color.White;
             this.Prodid.HintForeColor = System.Drawing.Color.White;
             this.Prodid.HintText = "";
             this.Prodid.isPassword = false;
