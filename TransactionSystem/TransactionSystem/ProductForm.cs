@@ -116,6 +116,11 @@ namespace TransactionSystem
                 MessageBox.Show("Producty Added Successfully");
                 Con.Close();
                 populate();
+                Prodid.Text = "";
+                Prodname.Text = "";
+                Prodprice.Text = "";
+                ProdQty.Text = "";
+                
             }
             catch (Exception ex)
             {
@@ -125,12 +130,14 @@ namespace TransactionSystem
 
         private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Prodid.Text = ProdDG.SelectedCells[0].Value.ToString();
-            Prodname.Text = ProdDG.SelectedCells[1].Value.ToString();
-            ProdQty.Text = ProdDG.SelectedCells[2].Value.ToString();
-            Prodprice.Text = ProdDG.SelectedCells[3].Value.ToString();
+            Prodid.Text = ProdDG.CurrentRow.Cells[0].Value.ToString();
+            Prodname.Text = ProdDG.CurrentRow.Cells[1].Value.ToString();
+            ProdQty.Text = ProdDG.CurrentRow.Cells[2].Value.ToString();
+            Prodprice.Text = ProdDG.CurrentRow.Cells[3].Value.ToString();
 
-           // CatCb.SelectedValue = ProdDG.SelectedRows[0].Cells[4].Value.ToString();
+      
+
+            // CatCb.SelectedValue = ProdDG.SelectedRows[0].Cells[4].Value.ToString();
 
 
         }
@@ -162,6 +169,72 @@ namespace TransactionSystem
         private void bunifuFlatButton7_Click(object sender, EventArgs e)
         {
             populate();
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Prodid.Text == "")
+                {
+                    MessageBox.Show("Select the category to delete");
+
+                }
+                else
+                {
+                    Con.Open();
+                    String query = "delete from ProductTb1 where  Prodid=" + Prodid.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product Deleted");
+
+                    Con.Close();
+                    populate();
+                    Prodid.Text = "";
+                    Prodname.Text = "";
+                    ProdQty.Text = "";
+                    Prodprice.Text = "";
+                
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Prodid.Text == "" || Prodname.Text == "" || ProdQty.Text == "" || Prodprice.Text == "")
+                {
+                    MessageBox.Show("Missing Information");
+                }
+                else
+                {
+                    Con.Open();
+                    string query = "update ProductTb1 set ProductName='" + Prodname.Text + "', ProdQty='" + ProdQty.Text + "', ProdPrice='" + Prodprice.Text + "' where Prodid=" + Prodid.Text + ";";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product Successfully Updated");
+
+                    Con.Close();
+                    populate();
+                    Prodid.Text = "";
+                    Prodname.Text = "";
+                    ProdQty.Text = "";
+                    Prodprice.Text = "";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -40,6 +40,9 @@ namespace TransactionSystem
                 MessageBox.Show("Category Added Successfully");
                 Con.Close();
                 populate();
+                catidDbtxt.Text = "";
+                CatNameTxt.Text = "";
+                CatDescTxt.Text = "";
             }
             catch (Exception ex)
             {
@@ -134,6 +137,9 @@ namespace TransactionSystem
 
                     Con.Close();
                     populate();
+                    catidDbtxt.Text = "";
+                    CatNameTxt.Text = "";
+                    CatDescTxt.Text = "";
                 }
 
             }
@@ -162,6 +168,9 @@ namespace TransactionSystem
 
                     Con.Close();
                     populate();
+                    catidDbtxt.Text = "";
+                    CatNameTxt.Text = "";
+                    CatDescTxt.Text = "";
                 }
 
             }catch(Exception ex)

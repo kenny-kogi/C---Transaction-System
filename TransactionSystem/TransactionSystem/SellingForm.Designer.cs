@@ -55,7 +55,6 @@ namespace TransactionSystem
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Prodname = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.ProdQty = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.Prodprice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Billid = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -64,6 +63,7 @@ namespace TransactionSystem
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.prodprice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ORDERDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProdDGV)).BeginInit();
@@ -75,6 +75,7 @@ namespace TransactionSystem
             this.bunifuGradientPanel1.BackColor = System.Drawing.SystemColors.ControlText;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.prodprice);
             this.bunifuGradientPanel1.Controls.Add(this.Sellername);
             this.bunifuGradientPanel1.Controls.Add(this.Amtlbl);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel5);
@@ -88,7 +89,6 @@ namespace TransactionSystem
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton1);
             this.bunifuGradientPanel1.Controls.Add(this.Prodname);
             this.bunifuGradientPanel1.Controls.Add(this.ProdQty);
-            this.bunifuGradientPanel1.Controls.Add(this.Prodprice);
             this.bunifuGradientPanel1.Controls.Add(this.Billid);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel4);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel3);
@@ -204,7 +204,7 @@ namespace TransactionSystem
             // 
             // bunifuFlatButton5
             // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.White;
             this.bunifuFlatButton5.BackColor = System.Drawing.Color.White;
             this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton5.BorderRadius = 0;
@@ -259,6 +259,7 @@ namespace TransactionSystem
             this.ProdDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProdDGV.DoubleBuffered = true;
             this.ProdDGV.EnableHeadersVisualStyles = false;
+            this.ProdDGV.GridColor = System.Drawing.Color.Blue;
             this.ProdDGV.HeaderBgColor = System.Drawing.Color.White;
             this.ProdDGV.HeaderForeColor = System.Drawing.Color.Blue;
             this.ProdDGV.Location = new System.Drawing.Point(17, 287);
@@ -402,7 +403,7 @@ namespace TransactionSystem
             // 
             // Prodname
             // 
-            this.Prodname.BackColor = System.Drawing.Color.Blue;
+            this.Prodname.BackColor = System.Drawing.Color.White;
             this.Prodname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Prodname.Enabled = false;
             this.Prodname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
@@ -441,27 +442,6 @@ namespace TransactionSystem
             this.ProdQty.Size = new System.Drawing.Size(194, 44);
             this.ProdQty.TabIndex = 13;
             this.ProdQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // Prodprice
-            // 
-            this.Prodprice.BackColor = System.Drawing.Color.Blue;
-            this.Prodprice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Prodprice.Enabled = false;
-            this.Prodprice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Prodprice.ForeColor = System.Drawing.Color.White;
-            this.Prodprice.HintForeColor = System.Drawing.Color.White;
-            this.Prodprice.HintText = "";
-            this.Prodprice.isPassword = false;
-            this.Prodprice.LineFocusedColor = System.Drawing.Color.White;
-            this.Prodprice.LineIdleColor = System.Drawing.Color.White;
-            this.Prodprice.LineMouseHoverColor = System.Drawing.Color.White;
-            this.Prodprice.LineThickness = 3;
-            this.Prodprice.Location = new System.Drawing.Point(111, 97);
-            this.Prodprice.Margin = new System.Windows.Forms.Padding(4);
-            this.Prodprice.Name = "Prodprice";
-            this.Prodprice.Size = new System.Drawing.Size(194, 44);
-            this.Prodprice.TabIndex = 12;
-            this.Prodprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Billid
             // 
@@ -572,6 +552,26 @@ namespace TransactionSystem
             this.bunifuCustomLabel6.Text = "Log out";
             this.bunifuCustomLabel6.Click += new System.EventHandler(this.bunifuCustomLabel6_Click_1);
             // 
+            // prodprice
+            // 
+            this.prodprice.BackColor = System.Drawing.Color.Blue;
+            this.prodprice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.prodprice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.prodprice.ForeColor = System.Drawing.Color.White;
+            this.prodprice.HintForeColor = System.Drawing.Color.White;
+            this.prodprice.HintText = "";
+            this.prodprice.isPassword = false;
+            this.prodprice.LineFocusedColor = System.Drawing.Color.White;
+            this.prodprice.LineIdleColor = System.Drawing.Color.White;
+            this.prodprice.LineMouseHoverColor = System.Drawing.Color.White;
+            this.prodprice.LineThickness = 3;
+            this.prodprice.Location = new System.Drawing.Point(111, 97);
+            this.prodprice.Margin = new System.Windows.Forms.Padding(4);
+            this.prodprice.Name = "prodprice";
+            this.prodprice.Size = new System.Drawing.Size(194, 44);
+            this.prodprice.TabIndex = 30;
+            this.prodprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // SellingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -601,7 +601,6 @@ namespace TransactionSystem
         private Bunifu.Framework.UI.BunifuCustomDataGrid BillDGV;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Prodname;
         private Bunifu.Framework.UI.BunifuMaterialTextbox ProdQty;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox Prodprice;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Billid;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
@@ -625,5 +624,6 @@ namespace TransactionSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private Bunifu.Framework.UI.BunifuCustomLabel Sellername;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox prodprice;
     }
 }

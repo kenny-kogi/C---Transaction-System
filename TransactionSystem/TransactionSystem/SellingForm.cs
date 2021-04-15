@@ -131,7 +131,7 @@ namespace TransactionSystem
         private void ProdDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Prodname.Text = ProdDGV.CurrentRow.Cells[0].Value.ToString();
-            Prodprice.Text = ProdDGV.CurrentRow.Cells[1].Value.ToString();
+            ProdQty.Text = ProdDGV.CurrentRow.Cells[1].Value.ToString();
            
         }
 
@@ -171,15 +171,15 @@ namespace TransactionSystem
 
             else {
 
-                int total = Convert.ToInt32(Prodprice.Text) * Convert.ToInt32(ProdQty.Text);
+                int total = Convert.ToInt32(prodprice.Text) * Convert.ToInt32(ProdQty.Text);
 
                 DataGridViewRow newRow = new DataGridViewRow();
                 newRow.CreateCells(ORDERDGV);
                 newRow.Cells[0].Value = n + 1;
                 newRow.Cells[1].Value = Prodname.Text;
-                newRow.Cells[2].Value = Prodprice.Text;
+                newRow.Cells[2].Value = prodprice.Text;
                 newRow.Cells[3].Value = ProdQty.Text;
-                newRow.Cells[4].Value = Convert.ToInt32(Prodprice.Text) * Convert.ToInt32(ProdQty.Text);
+                newRow.Cells[4].Value = Convert.ToInt32(prodprice.Text) * Convert.ToInt32(ProdQty.Text);
                 ORDERDGV.Rows.Add(newRow);
                 n++;
                 GrndTotal = GrndTotal + total;
@@ -234,6 +234,11 @@ namespace TransactionSystem
         }
 
         private void Sellername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Prodprice_OnValueChanged(object sender, EventArgs e)
         {
 
         }
