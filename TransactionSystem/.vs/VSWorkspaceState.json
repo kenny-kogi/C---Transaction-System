@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TransactionSystem"
   ],
-  "SelectedNode": "\\TransactionSystem.sln",
+  "SelectedNode": "\\TransactionSystem\\SellingForm.cs",
   "PreviewInSolutionExplorer": false
 }
